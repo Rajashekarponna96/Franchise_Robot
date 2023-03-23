@@ -7,9 +7,6 @@ import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
-import com.roboserver.common.CommonException;
-import com.roboserver.common.CommonExceptionMessage;
-
 @Entity
 public class Employee {
 
@@ -119,20 +116,6 @@ public class Employee {
 		return "Employee [id=" + id + ", name=" + name + ", phoneNo=" + phoneNo + ", email=" + email + ", city=" + city
 				+ ", business_cat=" + business_cat + ", type_Of_Robo_Use=" + type_Of_Robo_Use + ", intrested_In="
 				+ intrested_In + ", permissions=" + permissions + "]";
-	}
-	public void validateRequredfeilds() {
-
-		if (name.isEmpty()) {
-
-			throw CommonException.CreateException(CommonExceptionMessage.REQUIRED_ATTRIBUTE, "name");
-		}
-
-//		if (email.contains(".com")) {
-//
-//			throw CommonException.CreateException(CommonExceptionMessage.REQUIRED_EMAIL, "email");
-//		}
-//		+
-
 	}
 
 }

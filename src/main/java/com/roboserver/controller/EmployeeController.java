@@ -4,11 +4,8 @@ package com.roboserver.controller;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.roboserver.model.Employee;
@@ -29,12 +26,6 @@ public class EmployeeController {
   @PostMapping("/employee/save")
   public Employee save(@RequestBody Employee employee) {
 	  System.out.println("save..");
-	  employee.validateRequredfeilds();
-    //return employeeDao.save(employee);
-	  return employeeDao.save(employee);
+    return employeeDao.save(employee);
   }
-  @RequestMapping(value = "/{Id}", method = RequestMethod.DELETE)
-	public void deleteByEmployee(@PathVariable("Id") int Id) {
-		employeeDao.delete(Id);
-	}
 }
