@@ -8,4 +8,8 @@ import com.roboserver.model.Employee;
 @Repository
 public interface EmployeeRepository extends CrudRepository<Employee, Integer> {
 
+	Employee findByName(String name);
+
+	//Employee findByame(String name);
+
 }
