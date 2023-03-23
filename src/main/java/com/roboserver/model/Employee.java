@@ -10,79 +10,112 @@ import javax.validation.constraints.NotBlank;
 @Entity
 public class Employee {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int id;
-  
-  @NotBlank
-  private String name;
-  
-  @NotBlank
-  private String phoneNo;
-  
-  @NotBlank
-  @Email
-  private String email;
-  
-  @NotBlank
-  private String city;
-  
-  @NotBlank
-  private String business_cat;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
 
-public int getId() {
-	return id;
-}
+	@NotBlank
+	private String name;
 
-public void setId(int id) {
-	this.id = id;
-}
+	@NotBlank
+	private String phoneNo;
 
-public String getName() {
-	return name;
-}
+	@NotBlank
+	@Email
+	private String email;
 
-public void setName(String name) {
-	this.name = name;
-}
+	@NotBlank
+	private String city;
 
-public String getPhoneNo() {
-	return phoneNo;
-}
+	@NotBlank
+	private String business_cat;
 
-public void setPhoneNo(String phoneNo) {
-	this.phoneNo = phoneNo;
-}
+	@NotBlank
+	private String type_Of_Robo_Use;
 
-public String getEmail() {
-	return email;
-}
+	@NotBlank
+	private String intrested_In;
 
-public void setEmail(String email) {
-	this.email = email;
-}
+	@NotBlank
+	private String permissions;
 
-public String getCity() {
-	return city;
-}
+	public String getType_Of_Robo_Use() {
+		return type_Of_Robo_Use;
+	}
 
-public void setCity(String city) {
-	this.city = city;
-}
+	public void setType_Of_Robo_Use(String type_Of_Robo_Use) {
+		this.type_Of_Robo_Use = type_Of_Robo_Use;
+	}
 
-public String getBusiness_cat() {
-	return business_cat;
-}
+	public String getIntrested_In() {
+		return intrested_In;
+	}
 
-public void setBusiness_cat(String business_cat) {
-	this.business_cat = business_cat;
-}
+	public void setIntrested_In(String intrested_In) {
+		this.intrested_In = intrested_In;
+	}
 
-@Override
-public String toString() {
-	return "Employee [id=" + id + ", name=" + name + ", phoneNo=" + phoneNo + ", email=" + email + ", city=" + city
-			+ ", business_cat=" + business_cat + "]";
-}
+	public String getPermissions() {
+		return permissions;
+	}
 
+	public void setPermissions(String permissions) {
+		this.permissions = permissions;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPhoneNo() {
+		return phoneNo;
+	}
+
+	public void setPhoneNo(String phoneNo) {
+		this.phoneNo = phoneNo;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getBusiness_cat() {
+		return business_cat;
+	}
+
+	public void setBusiness_cat(String business_cat) {
+		this.business_cat = business_cat;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", phoneNo=" + phoneNo + ", email=" + email + ", city=" + city
+				+ ", business_cat=" + business_cat + ", type_Of_Robo_Use=" + type_Of_Robo_Use + ", intrested_In="
+				+ intrested_In + ", permissions=" + permissions + "]";
+	}
 
 }
